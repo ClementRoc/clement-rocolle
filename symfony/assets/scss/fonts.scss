@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Lemon';
+    font-style: normal;
+    font-weight: normal;
+    src: 
+        url('../fonts/lemon.woff2') format('woff2'),
+        url('../fonts/lemon.woff') format('woff'),
+        url('../fonts/lemon.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red Rose';
+    font-weight: normal;
+    font-style: normal;
+    src: 
+        url('../fonts/redrose.woff2') format('woff2'),
+        url('../fonts/redrose.woff') format('woff'),
+        url('../fonts/redrose.ttf') format('truetype');
+    font-display: swap;
+}
