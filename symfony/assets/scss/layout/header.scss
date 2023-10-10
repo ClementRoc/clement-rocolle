@@ -1,6 +1,40 @@
 .header{
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    left: 0;
+    padding: 8rem;
+    margin-left: 16rem;
+    height: 100%;
 
     &-title{
-        font-family: "Lemon";
+        font-size: 40px;
+        color: $green;
+        font-weight: 400;
+        text-shadow: 0 0 7px $black, 0 0 10px $green;
+        margin: 0;
     }
+
+    &-presentation{
+        font-family: $font-redrose;
+        font-size: 24px;
+    }
+
+    &-img{
+        position: relative;
+        width: 12rem;
+        left: -28px;
+    }
+
+    &-social{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1.9rem;
+        width: 12rem;
+        padding: 1rem;
+        background-color: $white;
+        border-radius: 15px;
+        position: absolute;
+        bottom: 8rem;
+    }   
 }

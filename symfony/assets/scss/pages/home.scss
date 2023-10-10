@@ -1,0 +1,70 @@
+.page-home{
+
+    .home{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 8rem; 
+        width: 48rem;
+        position: absolute;
+        top: 8rem;
+        right: 16rem;
+
+        &-header{
+
+            &-presentation{
+
+                p{
+                    color: $grey;
+
+                    strong{
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &-experiences{
+            display: flex;
+            flex-flow: column nowrap;
+
+            &-title{
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &-underline{
+                margin: 0;
+                border: 1px solid $grey;
+            }
+
+            &-container{
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 8rem;
+                margin-top: 4rem;
+            }
+        }
+
+        &-portfolio{
+            display: flex;
+            flex-flow: column nowrap;
+
+            &-title{
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &-underline{
+                margin: 0;
+                border: 1px solid $grey;
+            }
+
+            &-container{
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 8rem;
+                margin-top: 4rem;
+            }
+        }
+    }
+}

@@ -6,4 +6,93 @@
 
 {% block body %}
     {% include 'include/header.html.twig' %}
+    <div class="home">
+        <div class="home-header">
+            <div class="home-header-presentation">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, <strong>illo corporis ullam</strong>, error consequatur aspernatur autem asperiores enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam <strong>labore velit</strong>, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim.</p>
+            </div>
+        </div>
+        <div class="home-experiences">
+            <h1 class="home-experiences-title">Experiences</h1>
+            <hr class="home-experiences-underline">
+            <div class="home-experiences-container">
+                <div class="block">
+                    <p class="block-date">MARS - JUIN 2022</p>
+                    <div class="block-info">
+                        <p class="block-info-title">Stagiaire Développeur Back-End</p>
+                        <a class="block-info-society" href="https://zol.fr/" target="_blank">ZOL</a>
+                        <p class="block-info-presentation">Faites appel à mes services pour créer la solution digitale adaptée à vos besoins ! Découvrez mes projets personnelles</p>
+                        <div class="block-info-tags">
+                            <div class="tag">
+                                <p class="tag-text">PHP</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Symfony</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Contentful</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Gulp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-portfolio">
+            <h1 class="home-portfolio-title">Portfolio</h1>
+            <hr class="home-portfolio-underline">
+            <div class="home-portfolio-container">
+                <div class="block">
+                    <div class="block-img-container">
+                        <img class="block-img" src="{{ asset('build/img/logos/odadi-france.jpg') }}" alt="Odadi France">
+                    </div>
+                    <div class="block-info">
+                        <p class="block-info-title">Trésorier - Responsable Digitale</p>
+                        <a class="block-info-society" href="" target="_blank">odadi-france.fr</a>
+                        <p class="block-info-presentation">Faites appel à mes services pour créer la solution digitale adaptée à vos besoins ! Découvrez mes projets personnelles</p>
+                        <div class="block-info-tags">
+                            <div class="tag">
+                                <p class="tag-text">PHP</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Symfony</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Contentful</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Gulp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block-img-container">
+                        <img class="block-img" src="{{ asset('build/img/header/clement.png') }}" alt="Clément Rocolle">
+                    </div>
+                    <div class="block-info">
+                        <p class="block-info-title">Designer - Développeur</p>
+                        <a class="block-info-society" href="" target="_blank">clement-rocolle.com</a>
+                        <p class="block-info-presentation">Faites appel à mes services pour créer la solution digitale adaptée à vos besoins ! Découvrez mes projets personnelles</p>
+                        <div class="block-info-tags">
+                            <div class="tag">
+                                <p class="tag-text">PHP</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Symfony</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Contentful</p>
+                            </div>
+                            <div class="tag">
+                                <p class="tag-text">Gulp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

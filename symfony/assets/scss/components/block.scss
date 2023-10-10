@@ -1,0 +1,53 @@
+.block{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4rem;
+
+    &-date{
+        color: $grey;
+        margin: 0;
+        white-space: nowrap;
+        width: 12rem;
+    }
+
+    &-img{
+        max-height: 6rem;
+        max-width: 11rem;
+        padding: 1rem;
+
+        &-container{
+            display: flex;
+            justify-content: center;
+            background-color: $dark-block;
+            border-radius: 5px;
+            width: 22rem;
+            height: max-content;
+        }
+    }
+
+    &-info{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0;
+
+        &-title{
+            margin: 0;
+        }
+
+        &-society{
+            color: $white;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        &-presentation{
+            color: $grey;
+        }
+
+        &-tags{
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1rem;
+        }
+    }
+}
