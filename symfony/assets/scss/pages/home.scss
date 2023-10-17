@@ -3,15 +3,16 @@
     .home{
         display: flex;
         flex-flow: column nowrap;
-        gap: 8rem; 
+        gap: 4rem; 
         width: 48rem;
         position: absolute;
-        top: 8rem;
-        right: 16rem;
+        padding: 4rem;
+        right: 20rem;
 
         &-header{
 
             &-presentation{
+                padding: 0 2rem 0 2rem;
 
                 p{
                     color: $grey;
@@ -28,20 +29,21 @@
             flex-flow: column nowrap;
 
             &-title{
+                padding: 0 2rem 0 2rem;
                 font-weight: 400;
                 margin: 0;
             }
 
             &-underline{
-                margin: 0;
+                margin: 0 2rem 0 2rem;
                 border: 1px solid $grey;
             }
 
             &-container{
                 display: flex;
                 flex-flow: column nowrap;
-                gap: 8rem;
-                margin-top: 4rem;
+                gap: 2rem;
+                margin-top: 1rem;
             }
         }
 
@@ -50,20 +52,86 @@
             flex-flow: column nowrap;
 
             &-title{
+                padding: 0 2rem 0 2rem;
                 font-weight: 400;
                 margin: 0;
             }
 
             &-underline{
-                margin: 0;
+                margin: 0 2rem 0 2rem;
                 border: 1px solid $grey;
             }
 
             &-container{
                 display: flex;
                 flex-flow: column nowrap;
-                gap: 8rem;
-                margin-top: 4rem;
+                gap: 2rem;
+                margin-top: 1rem;
+            }
+        }
+
+        &-contact{
+            display: flex;
+            flex-flow: column nowrap;
+
+            &-title{
+                padding: 0 2rem 0 2rem;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &-underline{
+                margin: 0 2rem 0 2rem;
+                border: 1px solid $grey;
+            }
+
+            &-container{
+                padding: 0 2rem 0 2rem;
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 2rem;
+                margin-top: 2rem;
+
+                .container-form{
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    row-gap: 2rem;
+
+                    label{
+                        display: flex;
+                        flex-flow: column nowrap;
+                        color: $grey;
+                    }
+
+                    input{
+                        margin-top: 0.5rem;
+                        border: none;
+                        border-radius: 15px;
+                        height: 3rem;
+                        padding: 1rem;
+                    }
+
+                    textarea{
+                        margin-top: 0.5rem;
+                        border: none;
+                        border-radius: 15px;
+                        height: 10rem;
+                        padding: 1rem;
+                    }
+
+                    &-mail{
+                        width: 45%;
+                    }
+
+                    &-phone{
+                        width: 45%;
+                    }
+
+                    &-message{
+                        width: 100%;
+                    }
+                }
             }
         }
     }
