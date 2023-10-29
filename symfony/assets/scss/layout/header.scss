@@ -7,6 +7,11 @@
     margin-left: 16rem;
     height: 100%;
 
+    @include responsive-md{
+        margin-left: 8rem;
+        padding: 8rem;
+    }
+
     &-title{
         font-size: 40px;
         color: $green;
