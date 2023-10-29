@@ -7,9 +7,8 @@
     margin-left: 20rem;
     height: 100%;
 
-    @include responsive-md{
-        margin-left: 8rem;
-        padding: 8rem;
+    @include responsive-xxl{
+        margin-left: 10rem;
     }
 
     &-title{

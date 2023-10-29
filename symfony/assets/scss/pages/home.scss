@@ -9,6 +9,10 @@
         padding: 4rem;
         right: 20rem;
 
+        @include responsive-xxl{
+            right: 10rem;
+        }
+
         &-header{
 
             &-presentation{

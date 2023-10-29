@@ -8,3 +8,14 @@ $white: #FFFFFF;
 $font-magic: 'Magic Retro'; 
 $font-redrose: 'Red Rose';
 $font-market: 'Market Deco';
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px,
+    xxxl: 1680px,
+    4xl: 1920px,
+);
