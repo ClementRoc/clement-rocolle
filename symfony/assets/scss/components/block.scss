@@ -1,13 +1,27 @@
 .block{
     display: flex;
     flex-flow: row nowrap;
-    gap: 4rem;
+    gap: 2rem;
+    margin: 1rem 0 1rem 0;
+    padding: 0 2rem 0 2rem;
+
+    &:hover{
+        padding: 1rem 2rem 1rem 2rem;
+        margin: 0;
+        border-radius: 15px;
+        background-color: #272727;
+        box-shadow: 0 0 7px $green, 0 0 10px $green-opacity;
+
+        .block-info-title{
+            color: $green;
+        }
+    }
 
     &-date{
         color: $grey;
         margin: 0;
         white-space: nowrap;
-        width: 12rem;
+        width: 25%;
     }
 
     &-img{
@@ -20,7 +34,7 @@
             justify-content: center;
             background-color: $dark-block;
             border-radius: 5px;
-            width: 22rem;
+            width: 25%;
             height: max-content;
         }
     }
@@ -29,14 +43,16 @@
         display: flex;
         flex-flow: column nowrap;
         gap: 0;
+        width: 70%;
 
         &-title{
             margin: 0;
+            font-size: 20px;
         }
 
         &-society{
             color: $white;
-            font-size: 20px;
+            font-size: 16px;
             margin: 0;
         }
 

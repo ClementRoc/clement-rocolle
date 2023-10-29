@@ -6,14 +6,15 @@
 
 {% block body %}
     {% include 'include/header.html.twig' %}
-    <div class="home">
+    {% include 'include/background.html.twig' %}
+    <div class="home lazyload-right">
         <div class="home-header">
             <div class="home-header-presentation">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, <strong>illo corporis ullam</strong>, error consequatur aspernatur autem asperiores enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam <strong>labore velit</strong>, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim.</p>
             </div>
         </div>
         <div class="home-experiences">
-            <h1 class="home-experiences-title">Experiences</h1>
+            <h2 class="home-experiences-title">Experiences</h2>
             <hr class="home-experiences-underline">
             <div class="home-experiences-container">
                 <div class="block">
@@ -41,7 +42,7 @@
             </div>
         </div>
         <div class="home-portfolio">
-            <h1 class="home-portfolio-title">Portfolio</h1>
+            <h2 class="home-portfolio-title">Portfolio</h2>
             <hr class="home-portfolio-underline">
             <div class="home-portfolio-container">
                 <div class="block">
@@ -92,6 +93,23 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="home-contact">
+            <h2 class="home-contact-title">Me contacter</h2>
+            <hr class="home-contact-underline">
+            <div class="home-contact-container">
+                <form action="" class="container-form">
+                    <label for="" class="container-form-mail">Adresse mail
+                        <input type="mail">
+                    </label>
+                    <label for="" class="container-form-phone">Téléphone (facultatif)
+                        <input type="phone">
+                    </label>
+                    <label for="" class="container-form-message">Message
+                        <textarea type="text"></textarea>
+                    </label>
+                </form>
             </div>
         </div>
     </div>
