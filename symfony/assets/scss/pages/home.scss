@@ -13,6 +13,20 @@
             right: 10rem;
         }
 
+        @include responsive-xl{
+            right: 4rem;
+        }
+
+        @include responsive-lg{
+            position: unset;
+            width: 100%;
+            padding: 4rem;
+        }
+
+        @include responsive-xs{
+            padding: unset;
+        }
+
         &-header{
 
             &-presentation{
@@ -78,6 +92,10 @@
             display: flex;
             flex-flow: column nowrap;
 
+            @include responsive-xs{
+                padding-bottom: 2rem;
+            }
+
             &-title{
                 padding: 0 2rem 0 2rem;
                 font-weight: 400;
@@ -99,7 +117,7 @@
                 .container-form{
                     display: flex;
                     flex-flow: row wrap;
-                    justify-content: space-between;
+                    justify-content: flex-end;
                     row-gap: 2rem;
 
                     label{
@@ -124,16 +142,46 @@
                         padding: 1rem;
                     }
 
-                    &-mail{
-                        width: 45%;
-                    }
+                    &-info{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                        width: 100%;
 
-                    &-phone{
-                        width: 45%;
+                        @include responsive-xs{
+                            flex-flow: column nowrap;
+                            gap: 2rem;
+                        }
+
+                        &-mail{
+                            width: 45%;
+
+                            @include responsive-xs{
+                                width: 100%;
+                            }
+                        }
+    
+                        &-phone{
+                            width: 45%;
+
+                            @include responsive-xs{
+                                width: 100%;
+                            }
+                        }
                     }
 
                     &-message{
                         width: 100%;
+                    }
+
+                    &-button{
+                        width: 25%;
+                        font-size: 20px;
+                        cursor: pointer;
+
+                        @include responsive-xs{
+                            width: 40%;
+                        }
                     }
                 }
             }

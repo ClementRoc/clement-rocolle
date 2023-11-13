@@ -11,12 +11,32 @@
         margin-left: 10rem;
     }
 
+    @include responsive-xl{
+        margin-left: 4rem;
+    }
+
+    @include responsive-lg{
+        left: unset;
+        margin-left: 0;
+        position: unset;
+        align-items: center;
+        padding: 4rem;
+    }
+
+    @include responsive-xs{
+        padding: 2rem;
+    }
+
     &-title{
         font-size: 40px;
         color: $green;
         font-weight: 400;
         text-shadow: 0 0 7px $black, 0 0 10px $green;
         margin: 0;
+
+        @include responsive-xs{
+            font-size: 24px;
+        }
     }
 
     &-presentation{
@@ -28,6 +48,11 @@
         position: relative;
         width: 12rem;
         left: -28px;
+
+        @include responsive-xs{
+            position: unset;
+            left: 0;
+        }
     }
 
     &-social{
@@ -40,5 +65,24 @@
         border-radius: 15px;
         position: absolute;
         bottom: 4rem;
+
+        @include responsive-lg{
+            flex-flow: column nowrap;
+            position: fixed;
+            right: 0;
+            width: auto;
+            border-radius: 15px 0 0 15px;
+            height: 12rem;
+            top: 4rem;
+            padding: 1rem;
+            gap: 1.5rem;
+        }
+
+        @include responsive-xs{
+            height: 9.5rem;
+            top: 2rem;
+            padding: 0.5rem;
+            gap: 1rem;
+        }
     }   
 }

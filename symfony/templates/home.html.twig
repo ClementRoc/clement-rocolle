@@ -10,7 +10,7 @@
     <div class="home lazyload-right">
         <div class="home-header">
             <div class="home-header-presentation">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, <strong>illo corporis ullam</strong>, error consequatur aspernatur autem asperiores enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam <strong>labore velit</strong>, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim.</p>
+                <p>{{ 'home.header'|trans|raw }}</p>
             </div>
         </div>
         <div class="home-experiences">
@@ -106,15 +106,18 @@
             <hr class="home-contact-underline">
             <div class="home-contact-container">
                 <form action="" class="container-form">
-                    <label for="" class="container-form-mail">Adresse mail
-                        <input type="mail">
-                    </label>
-                    <label for="" class="container-form-phone">Téléphone (facultatif)
-                        <input type="phone">
-                    </label>
+                    <div class="container-form-info">
+                        <label for="" class="container-form-info-mail">Adresse mail
+                            <input type="mail">
+                        </label>
+                        <label for="" class="container-form-info-phone">Téléphone (facultatif)
+                            <input type="phone">
+                        </label>
+                    </div>
                     <label for="" class="container-form-message">Message
                         <textarea type="text"></textarea>
                     </label>
+                    <input type="submit" class="container-form-button button" value="Envoyer">
                 </form>
             </div>
         </div>

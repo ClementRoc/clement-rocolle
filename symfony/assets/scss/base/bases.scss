@@ -6,6 +6,10 @@
 body{
   background-color: $black;
   width: 100%;
+  
+  @include responsive-xs{
+    margin: 0;
+  }
 }
 
 p{

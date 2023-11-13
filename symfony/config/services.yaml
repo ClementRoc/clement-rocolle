@@ -26,3 +26,10 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+
+    App\Service\ContentfulService:
+        arguments:
+            $contentfulDeliveryApiKey: '%env(CONTENTFUL_DELIVERY_API_KEY)%'
+            $contentfulSpaceId: '%env(CONTENTFUL_SPACE_ID)%'
+            $contentfulEnvironment: '%env(CONTENTFUL_ENVIRONMENT)%'

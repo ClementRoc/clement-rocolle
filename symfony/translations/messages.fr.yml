@@ -1,4 +1,5 @@
 header:
+  title: Clement Rocolle
   presentation: Developpeur Web Junior
   instagram: 
   linkedin: https://www.linkedin.com/in/cl%C3%A9ment-rocolle-84a57a123/
@@ -7,3 +8,4 @@ header:
 home:
   name: Page d'accueil
   titleTag: Clément Rocolle - Développeur Web
+  header: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, <strong>illo corporis ullam</strong>, error consequatur aspernatur autem asperiores enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam <strong>labore velit</strong>, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim.

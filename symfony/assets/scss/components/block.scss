@@ -17,6 +17,23 @@
         }
     }
 
+    @include responsive-xs{
+        flex-flow: column nowrap;
+        gap: 1rem;
+
+        &:hover{
+            margin: 1rem 0 1rem 0;
+            padding: 0 2rem 0 2rem;
+            border-radius: unset;
+            background-color: unset;
+            box-shadow: unset;
+
+            .block-info-title{
+                color: $white;
+            }
+        }
+    }
+
     &-date{
         color: $grey;
         margin: 0;
@@ -36,6 +53,10 @@
             border-radius: 5px;
             width: 25%;
             height: max-content;
+
+            @include responsive-xs{
+                width: 100%;
+            }
         }
     }
 
@@ -44,6 +65,10 @@
         flex-flow: column nowrap;
         gap: 0;
         width: 70%;
+
+        @include responsive-xs{
+            width: 100%;
+        }
 
         &-title{
             margin: 0;
