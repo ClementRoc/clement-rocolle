@@ -1,5 +1,7 @@
 {% extends '_layout.html.twig' %}
 
+{% import 'macro/block.html.twig' as blockMacro %}
+
 {% set pageTemplate = 'home' %}
 {% set titleTag = 'home.titleTag'|trans %}
 {% set metaDescription = 'home.metaDescription'|trans %}
@@ -17,6 +19,11 @@
             <h2 class="home-experiences-title">Experiences</h2>
             <hr class="home-experiences-underline">
             <div class="home-experiences-container">
+            {# {% if experiences is defined %}
+                {% for experience in experiences %}
+                {{ blockMacro.blockExperience(experience.date, experience.title, experience.society, experience.societyLink, experience.presentation, experience.tags) }}
+                {% endfor %}
+            {% endif %} #}
                 <div class="block">
                     <p class="block-date">MARS - JUIN 2022</p>
                     <div class="block-info">

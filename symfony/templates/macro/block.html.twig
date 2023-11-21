@@ -1,0 +1,37 @@
+{% macro blockExperience(date, title, society, societyLink, presentation, tags) %}
+<div class="block">
+    <p class="block-date">{{ date }}</p>
+    <div class="block-info">
+        <p class="block-info-title">{{ title }}</p>
+        <a class="block-info-society" href="{{ societyLink }}" target="_blank">{{ society }}</a>
+        <p class="block-info-presentation">{{ presentation }}</p>
+        <div class="block-info-tags">
+        {% for tag in tags %}
+            <div class="tag">
+                <p class="tag-text">{{ tag }}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro blockPortfolio(img, title, society, societyLink, presentation, tags) %}
+<div class="block">
+    <div class="block-img-container">
+        <img class="block-img" src="{{ img }}" alt="{{ society }}">
+    </div>
+    <div class="block-info">
+        <p class="block-info-title">{{ title }}</p>
+        <a class="block-info-society" href="{{ societyLink }}" target="_blank">{{ society }}</a>
+        <p class="block-info-presentation">{{ presentation }}</p>
+        <div class="block-info-tags">
+        {% for tag in tags %}
+            <div class="tag">
+                <p class="tag-text">{{ tag }}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endmacro %}
