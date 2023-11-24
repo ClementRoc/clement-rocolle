@@ -50,7 +50,7 @@ class ContentfulService
 
                         break;
                     case 'paragraph':
-                        $content .= '<div>'.$this->transformItemToEmbed($item).'</div>';
+                        $content .= $this->transformItemToEmbed($item);
 
                         break;
                     case 'embedded-entry-block':

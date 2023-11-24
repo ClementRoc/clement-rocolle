@@ -27,7 +27,7 @@ class HomeService
 
         if (current($experiences->getIterator()) !== null) {
             foreach ($experiences as $experience) {
-                $experiencesDTO = $this->hydrateExperienceDTO($experience);
+                $experiencesDTO[] = $this->hydrateExperienceDTO($experience);
             }
         }
 
@@ -41,7 +41,7 @@ class HomeService
 
         if (current($portfolios->getIterator()) !== null) {
             foreach ($portfolios as $portfolio) {
-                $portfoliosDTO = $this->hydratePortfolioDTO($portfolio);
+                $portfoliosDTO[] = $this->hydratePortfolioDTO($portfolio);
             }
         }
 
@@ -52,10 +52,12 @@ class HomeService
     {
         $experienceDTO = new ExperienceDTO();
 
-        $experienceDTO->date         = $item->checkAttribute($item, 'date');
-        $experienceDTO->title        = $item->checkAttribute($item, 'title');
-        $experienceDTO->society      = $item->checkAttribute($item, 'society');
-        $experienceDTO->societyLink  = $item->checkAttribute($item, 'societyLink');
+        // dd($this->contentfulService->getRichTextContent($item->get('presentation')));
+
+        $experienceDTO->date         = $this->checkAttribute($item, 'date');
+        $experienceDTO->title        = $this->checkAttribute($item, 'title');
+        $experienceDTO->society      = $this->checkAttribute($item, 'society');
+        $experienceDTO->societyLink  = $this->checkAttribute($item, 'societyLink');
         $experienceDTO->presentation = $this->contentfulService->getRichTextContent($this->checkAttribute($item, 'presentation'));
         $experienceDTO->tags         = $this->checkAttribute($item, 'tags');
 
@@ -66,10 +68,10 @@ class HomeService
     {
         $portfolioDTO = new PortfolioDTO();
 
-        $portfolioDTO->image        = $item->checkPicture($item, 'image');
-        $portfolioDTO->title        = $item->checkAttribute($item, 'title');
-        $portfolioDTO->society      = $item->checkAttribute($item, 'society');
-        $portfolioDTO->societyLink  = $item->checkAttribute($item, 'societyLink');
+        $portfolioDTO->image        = $this->checkPicture($item, 'image');
+        $portfolioDTO->title        = $this->checkAttribute($item, 'title');
+        $portfolioDTO->society      = $this->checkAttribute($item, 'society');
+        $portfolioDTO->societyLink  = $this->checkAttribute($item, 'societyLink');
         $portfolioDTO->presentation = $this->contentfulService->getRichTextContent($this->checkAttribute($item, 'presentation'));
         $portfolioDTO->tags         = $this->checkAttribute($item, 'tags');
 

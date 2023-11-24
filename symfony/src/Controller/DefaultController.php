@@ -18,8 +18,8 @@ class DefaultController extends AbstractController
     public function home(HomeService $homeService): Response
     {
         return $this->render('home.html.twig', [
-            // 'experiences' => $homeService->getExperiences(),
-            // 'portfolios'  => $homeService->getPortfolios()
+            'experiences' => $homeService->getExperiences(),
+            'portfolios'  => $homeService->getPortfolios()
         ]);
     }
 }
