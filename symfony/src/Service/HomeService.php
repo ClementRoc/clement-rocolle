@@ -52,8 +52,6 @@ class HomeService
     {
         $experienceDTO = new ExperienceDTO();
 
-        // dd($this->contentfulService->getRichTextContent($item->get('presentation')));
-
         $experienceDTO->date         = $this->checkAttribute($item, 'date');
         $experienceDTO->title        = $this->checkAttribute($item, 'title');
         $experienceDTO->society      = $this->checkAttribute($item, 'society');
