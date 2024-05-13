@@ -7,6 +7,12 @@ class ExperienceDTO
     /**
      * @var string
      */
+    public $image;
+
+    
+    /**
+     * @var string
+     */
     public $date;
 
     

@@ -16,12 +16,12 @@
             </div>
         </div>
         <div class="home-experiences">
-            <h2 class="home-experiences-title">Experiences</h2>
+            <h2 class="home-experiences-title">Experiences Professionnelles</h2>
             <hr class="home-experiences-underline">
             <div class="home-experiences-container">
             {% if experiences is defined %}
                 {% for experience in experiences %}
-                {{ blockMacro.blockExperience(experience.date, experience.title, experience.society, experience.societyLink, experience.presentation, experience.tags) }}
+                {{ blockMacro.blockExperience(experience.image, experience.date, experience.title, experience.society, experience.societyLink, experience.presentation, experience.tags) }}
                 {% endfor %}
             {% endif %}
             </div>
@@ -35,63 +35,9 @@
                 {{ blockMacro.blockPortfolio(portfolio.image, portfolio.title, portfolio.society, portfolio.societyLink, portfolio.presentation, portfolio.tags) }}
                 {% endfor %}
             {% endif %}
-                <div class="block">
-                    <div class="block-img-container">
-                        <img class="block-img" src="{{ asset('build/img/logos/odadi-france.jpg') }}" alt="Odadi France">
-                    </div>
-                    <div class="block-info">
-                        <p class="block-info-title">Trésorier - Développeur</p>
-                        <a class="block-info-society" href="" target="_blank">odadi-france.fr</a>
-                        <p class="block-info-presentation">Faites appel à mes services pour créer la solution digitale adaptée à vos besoins ! Découvrez mes projets personnelles</p>
-                        <div class="block-info-tags">
-                            <div class="tag">
-                                <p class="tag-text">PHP</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">Symfony</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">Contentful</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">Gulp</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">Visual Studio Code</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">JavaScript</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="block-img-container">
-                        <img class="block-img" src="{{ asset('build/img/header/clement.png') }}" alt="Clément Rocolle">
-                    </div>
-                    <div class="block-info">
-                        <p class="block-info-title">Designer - Développeur</p>
-                        <a class="block-info-society" href="" target="_blank">clement-rocolle.com</a>
-                        <p class="block-info-presentation">Faites appel à mes services pour créer la solution digitale adaptée à vos besoins ! Découvrez mes projets personnelles</p>
-                        <div class="block-info-tags">
-                            <div class="tag">
-                                <p class="tag-text">PHP</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">Symfony</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">Contentful</p>
-                            </div>
-                            <div class="tag">
-                                <p class="tag-text">Gulp</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="home-contact">
+        {# <div class="home-contact">
             <h2 class="home-contact-title">Me contacter</h2>
             <hr class="home-contact-underline">
             <div class="home-contact-container">
@@ -110,6 +56,6 @@
                     <input type="submit" class="container-form-button button" value="Envoyer">
                 </form>
             </div>
-        </div>
+        </div> #}
     </div>
 {% endblock %}

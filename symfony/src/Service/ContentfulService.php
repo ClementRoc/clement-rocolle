@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\DTO\PictureDTO;
+use App\DTO\MediaDTO;
 use Contentful\Core\Resource\ResourceArray;
 use Contentful\Delivery\Client;
 use Contentful\Delivery\ClientOptions;
@@ -109,28 +109,22 @@ class ContentfulService
         return $this->client->getEntries($query);
     }
 
-    /**
-     * widthLimit allows you to define a min/max width for the picture in pixels
-     */
-    public function getContentfulPicture(Entry $entry, string $attribute, int $widthLimit = null): PictureDTO
+    public function getContentfulMedia(Entry $entry, string $attribute, int $widthLimit = null): MediaDTO
     {
         $asset      = $entry->get($attribute);
-        $pictureDTO = new PictureDTO();
+        $mediaDTO   = new MediaDTO();
 
-        foreach ($asset as $item) {
-            $pictureDTO->format   = $item->getFile()->getContentType();
-            $pictureDTO->url      = $item->getFile()->getUrl();
-            $pictureDTO->fileName = $item->getFile()->getFileName();
-            if ($widthLimit !== null) {
-                if ($item->getFile()->getWidth() > $widthLimit) {
-                    $pictureDTO->width = "(min-width: {$widthLimit}px)";
-                } else {
-                    $pictureDTO->width = '(max-width: '.($widthLimit - 1).'px)';
-                }
+        if (is_array($asset)){
+            foreach ($asset as $item) {
+                $mediaDTO->url      = $item->getFile()->getUrl();
+                $mediaDTO->fileName = $item->getFile()->getFileName();
             }
+        } else {
+            $mediaDTO->url      = $asset->getFile()->getUrl();
+            $mediaDTO->fileName = $asset->getFile()->getFileName();
         }
 
-        return $pictureDTO;
+        return $mediaDTO;
     }
 
     /**

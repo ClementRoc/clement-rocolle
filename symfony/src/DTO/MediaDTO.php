@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\DTO;
 
-class PictureDTO
+class MediaDTO
 {
     /**
      * @var string
@@ -15,14 +15,4 @@ class PictureDTO
      * @var string
      */
     public $url;
-
-    /**
-     * @var string
-     */
-    public $format;
-
-    /**
-     * @var string
-     */
-    public $width;
 }

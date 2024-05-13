@@ -70,6 +70,12 @@
             width: 100%;
         }
 
+        &-date{
+            color: $grey;
+            margin: 0;
+            white-space: nowrap;
+        }
+
         &-title{
             margin: 0;
             font-size: 20px;

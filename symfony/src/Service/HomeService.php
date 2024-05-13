@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\DTO\PictureDTO;
+use App\DTO\MediaDTO;
 use App\DTO\ExperienceDTO;
 use App\DTO\PortfolioDTO;
 use App\Exception\HydrateObjectContentfulException;
@@ -52,6 +52,7 @@ class HomeService
     {
         $experienceDTO = new ExperienceDTO();
 
+        $experienceDTO->image        = $this->checkPicture($item, 'image');
         $experienceDTO->date         = $this->checkAttribute($item, 'date');
         $experienceDTO->title        = $this->checkAttribute($item, 'title');
         $experienceDTO->society      = $this->checkAttribute($item, 'society');
@@ -95,7 +96,7 @@ class HomeService
     /**
      * @throws HydrateObjectContentfulException
      */
-    private function checkPicture(Entry $entry, string $attribute, int $widthLimit = null): PictureDTO
+    private function checkPicture(Entry $entry, string $attribute, int $widthLimit = null): MediaDTO
     {
         if (!$entry->get($attribute)) {
             throw new HydrateObjectContentfulException(
@@ -105,6 +106,6 @@ class HomeService
             );
         }
 
-        return $this->contentfulService->getContentfulPicture($entry, $attribute, $widthLimit);
+        return $this->contentfulService->getContentfulMedia($entry, $attribute, $widthLimit);
     }
 }

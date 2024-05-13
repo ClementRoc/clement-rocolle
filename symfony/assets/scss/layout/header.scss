@@ -28,11 +28,7 @@
     }
 
     &-title{
-        font-size: 40px;
-        color: $green;
-        font-weight: 400;
-        text-shadow: 0 0 7px $black, 0 0 10px $green;
-        margin: 0;
+        font-size: 24px;
 
         @include responsive-xs{
             font-size: 24px;
@@ -40,8 +36,11 @@
     }
 
     &-presentation{
-        font-family: $font-redrose;
-        font-size: 24px;
+        font-size: 30px;
+        color: $green;
+        font-weight: 400;
+        text-shadow: 0 0 7px $black, 0 0 10px $green;
+        margin: 0;
     }
 
     &-img{
