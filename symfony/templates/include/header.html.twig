@@ -1,13 +1,20 @@
 <div class="header lazyload-left">
     <img class="header-img" alt="Clément Rocolle - Développeur Web" src="{{ asset('build/img/header/clement_colored.png') }}">
-    <p class="header-title">{{ 'header.title'|trans }}</p>
-    <h1 class="header-presentation">{{ 'header.presentation'|trans }}</h1>
+    <p class="header-name">{{ 'header.name'|trans }}</p>
+    <h1 class="header-title">{{ 'header.title'|trans }}</h1>
+    <a class="header-cv" href="{{ asset('build/pdf/CV.pdf') }}" download="CV_Clément_Rocolle.pdf" target="_blank">
+        <strong>Télécharger mon CV</strong> 
+        <img class="header-cv-img" src="{{ asset('build/img/logos/arrow.png') }}" alt="">
+    </a>
     <div class="header-social">
         <a href="{{ 'header.linkedin'|trans }}" target="_blank">
             <img class="header-social-img" src="{{ asset('build/img/logos/linkedin_black.png') }}" alt="Linkedin">
         </a>
         <a href="{{ 'header.github'|trans }}" target="_blank">
             <img class="header-social-img" src="{{ asset('build/img/logos/github.png') }}" alt="GitHub">
+        </a>
+        <a href="mailto:{{ 'header.mail'|trans }}">
+            <img class="header-social-img" src="{{ asset('build/img/logos/mail.png') }}" alt="Email">
         </a>
     </div>
 </div>

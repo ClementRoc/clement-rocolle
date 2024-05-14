@@ -22,7 +22,7 @@ class HomeService
 
     public function getExperiences(): array
     {
-        $experiences    = $this->contentfulService->getEntriesByContentType('experience');
+        $experiences    = $this->contentfulService->getEntriesByOrder('experience', 'fields.order', true);
         $experiencesDTO = [];
 
         if (current($experiences->getIterator()) !== null) {
@@ -36,7 +36,7 @@ class HomeService
 
     public function getPortfolios(): array
     {
-        $portfolios    = $this->contentfulService->getEntriesByContentType('portfolio');
+        $portfolios    = $this->contentfulService->getEntriesByOrder('portfolio', 'fields.order', true);
         $portfoliosDTO = [];
 
         if (current($portfolios->getIterator()) !== null) {
@@ -68,6 +68,7 @@ class HomeService
         $portfolioDTO = new PortfolioDTO();
 
         $portfolioDTO->image        = $this->checkPicture($item, 'image');
+        $portfolioDTO->date         = $this->checkAttribute($item, 'date');
         $portfolioDTO->title        = $this->checkAttribute($item, 'title');
         $portfolioDTO->society      = $this->checkAttribute($item, 'society');
         $portfolioDTO->societyLink  = $this->checkAttribute($item, 'societyLink');

@@ -27,7 +27,35 @@
         padding: 2rem;
     }
 
-    &-title{
+    &-cv{
+        margin: 2rem 0 2rem 0;
+        width: fit-content;
+        padding: 1rem;
+        border-radius: 15px;
+        background-color: $white;
+        text-decoration: none;
+        color: $black;
+        font-size: 16px;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1rem;
+        align-items: center;
+
+        &:hover{
+            background-color: $green;
+
+            img{
+                transform: rotate(90deg);
+                transition-duration: 500ms;
+            }
+        }
+
+        strong{
+                color: $black;
+        }
+    }
+
+    &-name{
         font-size: 24px;
 
         @include responsive-xs{
@@ -35,7 +63,7 @@
         }
     }
 
-    &-presentation{
+    &-title{
         font-size: 30px;
         color: $green;
         font-weight: 400;
@@ -57,13 +85,21 @@
     &-social{
         display: flex;
         flex-flow: row nowrap;
-        gap: 1.9rem;
+        gap: 2rem;
         width: 12rem;
         padding: 1rem;
         background-color: $white;
         border-radius: 15px;
         position: absolute;
         bottom: 4rem;
+
+        &:hover{
+            background-color: $green;
+        }
+
+        a{
+            height: 2rem;
+        }
 
         @include responsive-lg{
             flex-flow: column nowrap;
@@ -83,5 +119,9 @@
             padding: 0.5rem;
             gap: 1rem;
         }
-    }   
+
+        &-img{
+            width: 2rem;
+        }
+    }
 }

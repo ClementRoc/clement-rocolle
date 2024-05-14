@@ -13,7 +13,10 @@
         box-shadow: 0 0 7px $green, 0 0 10px $green-opacity;
 
         .block-info-title{
-            color: $green;
+
+            strong{
+                color: $green;
+            }
         }
     }
 
@@ -66,6 +69,12 @@
         gap: 0;
         width: 70%;
 
+        hr{
+            width: 25%;
+            margin: 0.7rem 0 0 0;
+            opacity: 0.5;
+        }
+
         @include responsive-xs{
             width: 100%;
         }
@@ -89,6 +98,13 @@
 
         &-presentation{
             color: $grey;
+
+            a{
+
+                u{
+                    color: $white;
+                }
+            }
         }
 
         &-tags{

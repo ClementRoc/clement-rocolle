@@ -13,6 +13,12 @@ class PortfolioDTO
     /**
      * @var string
      */
+    public $date;
+
+    
+    /**
+     * @var string
+     */
     public $title;
 
     

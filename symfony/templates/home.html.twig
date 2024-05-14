@@ -21,7 +21,7 @@
             <div class="home-experiences-container">
             {% if experiences is defined %}
                 {% for experience in experiences %}
-                {{ blockMacro.blockExperience(experience.image, experience.date, experience.title, experience.society, experience.societyLink, experience.presentation, experience.tags) }}
+                {{ blockMacro.block(experience.image, experience.date, experience.title, experience.society, experience.societyLink, experience.presentation, experience.tags) }}
                 {% endfor %}
             {% endif %}
             </div>
@@ -32,7 +32,7 @@
             <div class="home-portfolio-container">
             {% if portfolios is defined %}
                 {% for portfolio in portfolios %}
-                {{ blockMacro.blockPortfolio(portfolio.image, portfolio.title, portfolio.society, portfolio.societyLink, portfolio.presentation, portfolio.tags) }}
+                {{ blockMacro.block(portfolio.image, portfolio.date, portfolio.title, portfolio.society, portfolio.societyLink, portfolio.presentation, portfolio.tags) }}
                 {% endfor %}
             {% endif %}
             </div>
