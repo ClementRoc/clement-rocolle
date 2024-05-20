@@ -30,6 +30,9 @@
         &-header{
 
             &-presentation{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-end;
                 padding: 0 2rem 0 2rem;
 
                 p{
@@ -37,6 +40,33 @@
 
                     strong{
                         color: $white;
+                    }
+                }
+            
+                &-cv{
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: 15px;
+                    background-color: $white;
+                    text-decoration: none;
+                    color: $black;
+                    font-size: 16px;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    justify-content: center;
+            
+                    &:hover{
+                        background-color: $green;
+            
+                        img{
+                            transform: rotate(90deg);
+                            transition-duration: 500ms;
+                        }
+                    }
+            
+                    strong{
+                        color: $black;
                     }
                 }
             }

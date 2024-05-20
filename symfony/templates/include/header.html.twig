@@ -2,10 +2,38 @@
     <img class="header-img" alt="Clément Rocolle - Développeur Web" src="{{ asset('build/img/header/clement_colored.png') }}">
     <p class="header-name">{{ 'header.name'|trans }}</p>
     <h1 class="header-title">{{ 'header.title'|trans }}</h1>
-    <a class="header-cv" href="{{ asset('build/pdf/CV.pdf') }}" download="CV_Clément_Rocolle.pdf" target="_blank">
-        <strong>Télécharger mon CV</strong> 
-        <img class="header-cv-img" src="{{ asset('build/img/logos/arrow.png') }}" alt="">
-    </a>
+    <div class="header-education">
+        <div class="diploma">
+            <a class="diploma-school" href="https://www.epitech.eu/" target="_blank">
+                <img class="diploma-school-image" src="{{ asset('build/img/header/diploma/epitech-white.png') }}" alt="Epitech" title="Epitech">
+            </a>
+            <div class="diploma-info">
+                <h3 class="diploma-info-lvl">Master +5 </h3>
+                <h4 class="diploma-info-title">Architecte de systeme d'informations</h4>
+                <p class="diploma-info-date">2024 - </p>
+            </div>
+        </div>
+        <div class="diploma">
+            <a class="diploma-school" href="https://www.studi.com/fr" target="_blank">
+                <img class="diploma-school-image" src="{{ asset('build/img/header/diploma/studi.png') }}" alt="Studi" title="Studi">
+            </a>
+            <div class="diploma-info">
+                <h3 class="diploma-info-lvl">BACHELOR +3</h3>
+                <h4 class="diploma-info-title">Developpeur d'applications Python</h4>
+                <p class="diploma-info-date">2022 - 2023</p>
+            </div>
+        </div>
+        <div class="diploma">
+            <a class="diploma-school" href="https://www.studio-m.fr/" target="_blank">
+                <img class="diploma-school-image" src="{{ asset('build/img/header/diploma/studio-m.png') }}" alt="Studio-M" title="Studio-M">
+            </a>
+            <div class="diploma-info">
+                <h3 class="diploma-info-lvl">DUT +2</h3>
+                <h4 class="diploma-info-title">Ingenieur du son</h4>
+                <p class="diploma-info-date">2014 - 2016</p>
+            </div>
+        </div>
+    </div>
     <div class="header-social">
         <a href="{{ 'header.linkedin'|trans }}" target="_blank">
             <img class="header-social-img" src="{{ asset('build/img/logos/linkedin_black.png') }}" alt="Linkedin">

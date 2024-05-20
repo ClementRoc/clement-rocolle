@@ -6,6 +6,8 @@
     padding: 4rem;
     margin-left: 20rem;
     height: 100%;
+    gap: 2rem;
+    width: 45%;
 
     @include responsive-xxl{
         margin-left: 10rem;
@@ -27,36 +29,20 @@
         padding: 2rem;
     }
 
-    &-cv{
-        margin: 2rem 0 2rem 0;
-        width: fit-content;
-        padding: 1rem;
-        border-radius: 15px;
-        background-color: $white;
-        text-decoration: none;
-        color: $black;
-        font-size: 16px;
-        display: flex;
-        flex-flow: row nowrap;
-        gap: 1rem;
-        align-items: center;
+    &-img{
+        position: relative;
+        width: 12rem;
+        left: -28px;
 
-        &:hover{
-            background-color: $green;
-
-            img{
-                transform: rotate(90deg);
-                transition-duration: 500ms;
-            }
-        }
-
-        strong{
-                color: $black;
+        @include responsive-xs{
+            position: unset;
+            left: 0;
         }
     }
 
     &-name{
         font-size: 24px;
+        margin: 0;
 
         @include responsive-xs{
             font-size: 24px;
@@ -71,14 +57,57 @@
         margin: 0;
     }
 
-    &-img{
-        position: relative;
-        width: 12rem;
-        left: -28px;
+    &-education{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 2rem;
+        margin-top: 2rem;
 
-        @include responsive-xs{
-            position: unset;
-            left: 0;
+        .diploma{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            &-school{
+                display: flex;
+                flex-flow: column nowrap;
+                width: 15%;
+
+                &-image{
+                    width: auto;
+                }
+            }
+
+            &-info{
+                display: flex;
+                flex-flow: column nowrap;
+                width: 75%;
+
+                &-lvl{
+                    margin: 0;
+                    color: $yellow;
+                    text-shadow: none;
+                }
+
+                &-title{
+                    margin: .5rem 0 0 0;
+                    font-weight: 100;
+                    text-shadow: none;
+                }
+
+                &-date{
+                    margin: 0;
+                    font-size: 12px;
+                    font-style: italic;
+                }
+                
+                &-name{
+                    margin: 0;
+                    font-size: 20px;
+                }
+            }
         }
     }
 
@@ -92,10 +121,6 @@
         border-radius: 15px;
         position: absolute;
         bottom: 4rem;
-
-        &:hover{
-            background-color: $green;
-        }
 
         a{
             height: 2rem;

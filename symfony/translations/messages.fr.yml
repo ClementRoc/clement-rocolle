@@ -1,6 +1,6 @@
 header:
   name: Clément Rocolle
-  title: Developpeur PHP/Symfony
+  title: Developpeur d'applications
   mail: clem.roc5@gmail.com
   linkedin: https://www.linkedin.com/in/cl%C3%A9ment-rocolle-84a57a123/
   github: https://github.com/ClementRoc
@@ -8,4 +8,6 @@ header:
 home:
   name: Page d'accueil
   titleTag: Clément Rocolle - Développeur Web
-  header: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, <strong>illo corporis ullam</strong>, error consequatur aspernatur autem asperiores enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam <strong>labore velit</strong>, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam labore velit, nisi odio harum numquam eveniet facere laborum dolores voluptatum, illo corporis ullam, error consequatur aspernatur autem asperiores enim.
+  header: Passionné par <strong>l'intelligence artificielle</strong>, je suis un développeur créatif et motivé, actuellement à la <strong>recherche d'une alternance</strong> pour approfondir mes compétences en IA. Avec une solide expérience en <strong>HTML, CSS, JavaScript et Symfony</strong>, je suis déterminé à fusionner mes compétences en développement web avec des technologies d'IA pour créer des solutions innovantes. Mon objectif est de contribuer activement à des projets dynamiques et d'apprendre auprès de professionnels expérimentés dans le domaine de l'IA.
+
+

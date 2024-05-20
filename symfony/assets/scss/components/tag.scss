@@ -1,20 +1,20 @@
 .tag{
-    background-color: $yellow-opacity;
+    background-color: $green-opacity;
     padding: 0.5rem;
     border-radius: 30px;
     width: max-content;
-    box-shadow: 0 0 7px $black, 0 0 10px $yellow-opacity;
+    box-shadow: 0 0 7px $black, 0 0 10px $green-opacity;
 
     &:hover{
-        background-color: $black;
 
         .tag-text{
-            color: $white;
+            color: $yellow;
+            font-weight: bold;
         }
     }
 
     &-text{
-        color: $yellow;
+        color: $green;
         margin: 0;
         font-size: 16px;
     }
