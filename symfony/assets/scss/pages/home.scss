@@ -4,13 +4,13 @@
         display: flex;
         flex-flow: column nowrap;
         gap: 4rem; 
-        width: 48rem;
+        width: 52rem;
         position: absolute;
         padding: 4rem;
-        right: 20rem;
+        right: 15rem;
 
         @include responsive-xxl{
-            right: 10rem;
+            right: 5rem;
         }
 
         @include responsive-xl{
@@ -24,7 +24,7 @@
         }
 
         @include responsive-xs{
-            padding: unset;
+            padding: 1rem;
         }
 
         &-header{

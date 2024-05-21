@@ -4,13 +4,14 @@
     position: fixed;
     left: 0;
     padding: 4rem;
-    margin-left: 20rem;
+    margin-left: 15rem;
     height: 100%;
     gap: 2rem;
-    width: 45%;
+    width: 35%;
 
     @include responsive-xxl{
-        margin-left: 10rem;
+        margin-left: 5rem;
+        width: 40%;
     }
 
     @include responsive-xl{
@@ -18,15 +19,16 @@
     }
 
     @include responsive-lg{
+        width: auto;
         left: unset;
         margin-left: 0;
         position: unset;
         align-items: center;
-        padding: 4rem;
+        padding: 4rem 4rem 0 4rem;
     }
 
     @include responsive-xs{
-        padding: 2rem;
+        padding: 2rem 2rem 0 2rem;
     }
 
     &-img{
@@ -55,6 +57,10 @@
         font-weight: 400;
         text-shadow: 0 0 7px $black, 0 0 10px $green;
         margin: 0;
+
+        @include responsive-xs{
+            font-size: 20px;
+        }
     }
 
     &-education{
@@ -62,6 +68,16 @@
         flex-flow: column nowrap;
         gap: 2rem;
         margin-top: 2rem;
+
+        @include responsive-lg{
+            width: 75%;
+            padding: 0 2rem 0 2rem;
+        }
+
+        @include responsive-xs{
+            width: 100%;
+            padding: 0 1rem 0 1rem;
+        }
 
         .diploma{
             display: flex;
@@ -84,6 +100,10 @@
                 display: flex;
                 flex-flow: column nowrap;
                 width: 75%;
+
+                @include responsive-lg{
+                    width: 85%;
+                }
 
                 &-lvl{
                     margin: 0;

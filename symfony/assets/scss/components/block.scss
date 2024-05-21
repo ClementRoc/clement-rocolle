@@ -88,12 +88,20 @@
         &-title{
             margin: 0;
             font-size: 20px;
+
+            @include responsive-xs{
+                font-size: 16px;
+            }
         }
 
         &-society{
             color: $white;
             font-size: 16px;
             margin: 0;
+
+            @include responsive-xs{
+                font-size: 12px;
+            }
         }
 
         &-presentation{
