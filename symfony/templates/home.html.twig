@@ -13,9 +13,8 @@
         <div class="home-header">
             <div class="home-header-presentation">
                 <p>{{ 'home.header'|trans|raw }}</p>
-                <a class="home-header-presentation-cv" href="{{ asset('build/pdf/CV.pdf') }}" download="CV_Clément_Rocolle.pdf" target="_blank">
+                <a class="home-header-presentation-cv button" href="{{ asset('build/pdf/CV.pdf') }}" download="CV_Clément_Rocolle.pdf" target="_blank">
                     <strong>Télécharger mon CV</strong> 
-                    {# <img class="header-cv-img" src="{{ asset('build/img/logos/arrow.png') }}" alt=""> #}
                 </a>
             </div>
         </div>
@@ -25,7 +24,7 @@
             <div class="home-experiences-container">
             {% if experiences is defined %}
                 {% for experience in experiences %}
-                {{ blockMacro.block(experience.image, experience.date, experience.title, experience.society, experience.societyLink, experience.presentation, experience.tags) }}
+                {{ blockMacro.block(experience.image, experience.date, experience.title, experience.society, experience.societyLink, experience.presentation, experience.tags, experience.github) }}
                 {% endfor %}
             {% endif %}
             </div>
@@ -36,7 +35,7 @@
             <div class="home-portfolio-container">
             {% if portfolios is defined %}
                 {% for portfolio in portfolios %}
-                {{ blockMacro.block(portfolio.image, portfolio.date, portfolio.title, portfolio.society, portfolio.societyLink, portfolio.presentation, portfolio.tags) }}
+                {{ blockMacro.block(portfolio.image, portfolio.date, portfolio.title, portfolio.society, portfolio.societyLink, portfolio.presentation, portfolio.tags, portfolio.github) }}
                 {% endfor %}
             {% endif %}
             </div>

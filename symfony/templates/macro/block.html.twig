@@ -1,11 +1,11 @@
-{% macro block(image, date, title, society, societyLink, presentation, tags) %}
+{% macro block(image, date, title, society, societyLink, presentation, tags, github) %}
 <div class="block">
     <div class="block-img-container">
         <img class="block-img" src="{{ image.url }}" alt="{{ society }}">
     </div>
     <div class="block-info">
         <p class="block-info-title"><strong>{{ title }}</strong></p>
-        <p class="block-info-society">{{ society }} - <a class="block-info-society" href="https://{{ societyLink }}/" target="_blank">{{ societyLink }}</a></p>
+        <p class="block-info-society">{{ society }}</p>
         <p class="block-date">{{ date }}</p>
         <hr>
         <p class="block-info-presentation">{{ (presentation|raw)|nl2br }}</p>
@@ -15,6 +15,18 @@
                 <p class="tag-text">{{ tag }}</p>
             </div>
         {% endfor %}
+        </div>
+        <div class="block-info-buttons">
+            {% if github is not empty %}
+            <a class="button" href="{{ github }}" target="_blank">
+                <img class="button-image" src="{{ asset('build/img/logos/github.png') }}" alt="GitHub"> 
+                <strong>GitHub</strong>
+            </a>
+            {% endif %}
+            <a class="button" href="{{ societyLink }}" target="_blank">
+                <img class="button-image" src="{{ asset('build/img/logos/website.png') }}" alt="{{ society }}"> 
+                <strong>Site Web</strong>
+            </a>
         </div>
     </div>
 </div>

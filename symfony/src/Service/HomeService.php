@@ -59,6 +59,7 @@ class HomeService
         $experienceDTO->societyLink  = $this->checkAttribute($item, 'societyLink');
         $experienceDTO->presentation = $this->contentfulService->getRichTextContent($this->checkAttribute($item, 'presentation'));
         $experienceDTO->tags         = $this->checkAttribute($item, 'tags');
+        $experienceDTO->github       = $item->get('github');
 
         return $experienceDTO;
     }
@@ -74,6 +75,7 @@ class HomeService
         $portfolioDTO->societyLink  = $this->checkAttribute($item, 'societyLink');
         $portfolioDTO->presentation = $this->contentfulService->getRichTextContent($this->checkAttribute($item, 'presentation'));
         $portfolioDTO->tags         = $this->checkAttribute($item, 'tags');
+        $portfolioDTO->github       = $item->get('github');
 
         return $portfolioDTO;
     }

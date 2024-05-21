@@ -44,4 +44,10 @@ class ExperienceDTO
      * @var array
      */
     public $tags;
+
+    
+    /**
+     * @var string
+     */
+    public $github;
 }

@@ -120,5 +120,13 @@
             flex-flow: row wrap;
             gap: 1rem;
         }
+
+        &-buttons{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
     }
 }
