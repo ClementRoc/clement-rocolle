@@ -12,6 +12,7 @@
     @include responsive-xxl{
         margin-left: 5rem;
         width: 40%;
+        gap: 1rem;
     }
 
     @include responsive-xl{
@@ -69,14 +70,24 @@
         gap: 2rem;
         margin-top: 2rem;
 
+        @include responsive-xxl{
+            flex-flow: row nowrap;
+            gap: 1rem;
+        }
+
         @include responsive-lg{
-            width: 75%;
+            gap: 2rem;
+            width: 100%;
             padding: 0 2rem 0 2rem;
+            margin-top: 4rem;
+            justify-content: space-between;
         }
 
         @include responsive-xs{
-            width: 100%;
+            flex-flow: column nowrap;
+            margin-top: 2rem;
             padding: 0 1rem 0 1rem;
+            justify-content: normal;
         }
 
         .diploma{
@@ -86,10 +97,43 @@
             align-items: center;
             gap: 2rem;
 
+            @include responsive-xxl{
+                flex-flow: column nowrap;
+                width: 30%;
+                justify-content: normal;
+                align-items: normal;
+            }
+
+            @include responsive-lg{
+                flex-flow: row nowrap;
+            }
+
+            @include responsive-xs{
+                width: auto;
+                justify-content: space-between;
+                align-items: center;
+            }
+
             &-school{
                 display: flex;
                 flex-flow: column nowrap;
                 width: 15%;
+
+                @include responsive-xxl{
+                    width: 50%;
+                    height: 15%;
+                    justify-content: center;
+                }
+
+                @include responsive-lg{
+                    width: 30%;
+                    height: auto;
+                    justify-content: normal;
+                }
+
+                @include responsive-xs{
+                    width: 15%;
+                }
 
                 &-image{
                     width: auto;
@@ -101,7 +145,7 @@
                 flex-flow: column nowrap;
                 width: 75%;
 
-                @include responsive-lg{
+                @include responsive-xxl{
                     width: 85%;
                 }
 
@@ -121,11 +165,6 @@
                     margin: 0;
                     font-size: 12px;
                     font-style: italic;
-                }
-                
-                &-name{
-                    margin: 0;
-                    font-size: 20px;
                 }
             }
         }
